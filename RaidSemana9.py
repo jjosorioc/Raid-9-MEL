@@ -1,5 +1,6 @@
 """
-Script básico para un Algoritmo de la División y un Algoritmo que determine el Máximo Común Divisor de dos números.
+Script básico para un Algoritmo de la División y un Algoritmo que determine el Máximo Común Divisor de dos números,
+SIN USAR OPERACIONES DE DIVISIÓN
 
 MEL SEC04 20211
     
@@ -16,8 +17,13 @@ def printMenu():
 
 
 def algoritmoDivision(n: int, d: int):
+    """Algoritmo para la división de dos números
 
-    q = 0 # se inicializa en 1 porque cuando 'q' es cero 'r = n'
+    Args:
+        n (int): Dividendo
+        d (int): Divisor
+    """
+    q = 0 # Cantidad de iteraciones
     r = n # r es el residuo
     
     if d > 0:
@@ -29,20 +35,26 @@ def algoritmoDivision(n: int, d: int):
         print("{0} = ({1} * {2}) + {3}".format(n, q, d, r))
 
     else:
-        print("'d' no puede ser igual a cero")
+        print("'D' no puede ser igual a cero >:(")
 
 
 
 def maxComDivisor(n: int, d: int):
+    """Máximo Común Divisor de dos números.
+
+    Args:
+        n (int): entero mayor que 1
+        d (int): entero mayor que 1
+    """
     if n > 1 and d > 1:
 
         primero = n
 
         segundo = d
 
-        turno = True  # variable para ir cambiando la resta
+        turno = True  # variable para ir cambiando ubicación de la resta
 
-        while primero != segundo:
+        while primero != segundo:  # itera hasta que sean iguales (==)
 
             if turno:
                 segundo = abs(primero - segundo)
