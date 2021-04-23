@@ -35,7 +35,7 @@ def algoritmoDivision(n: int, d: int):
         print("{0} = ({1} * {2}) + {3}".format(n, q, d, r))
 
     else:
-        print("'D' no puede ser igual a cero >:(")
+        print("'D' no puede ser menor o igual a cero >:(")
 
 
 
